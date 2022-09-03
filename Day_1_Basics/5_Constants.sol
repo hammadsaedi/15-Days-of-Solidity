@@ -8,7 +8,6 @@ contract Constant {
     // Floating Point Sucks a lot. Dont you know?
     // Ether, Gewi, Wei? blah blah.
 
-
     // address public constant MY_ADDRESS = msg.sender; 
     // Initial value for constant variable has to be compile-time constant.
     // msg.sender; is run time. Very Amazing.
@@ -27,6 +26,8 @@ contract Constant {
     // Means for state variable access modifire is not mendatory. But, it shows erorr or just warning in methods?
     
     //No visibility specified. Did you intend to add "public"?
-    // function get(){}
+    // function get() returns (uint){
+    //     return PI;
+    // }
 
 }
