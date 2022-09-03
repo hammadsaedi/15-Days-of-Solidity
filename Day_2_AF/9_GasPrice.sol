@@ -213,9 +213,20 @@
     // balanceAtV10 = 99999999999998114633
     
     // msg.sender.balance is not same for all?
+    // Or May be its remix
 
+    uint public balanceAtV11;
+    function finiteV11() public { // ran out of names. HAHA
+        balanceAtV11 = msg.sender.balance;
+    }
+    // Before:
+    // balance: 99999999999994081124
+    // balanceAtV11: 0
+    // After:
+    // balance: 99999999999994054773
+    // balanceAtV11: 99999999999997050820
 
-
+    
     // All right, played much enough. Will try this topic next time.
  }
 
