@@ -44,7 +44,7 @@ contract DataLocations {
         database[_address] = data(_balance, name);
         // maping address to indices or something like that
         indices[length++] = _address; // incementing length
-
+        // added same addres twice and length got incremented. LOOOOL
     }
 
     function updateBalance(address _address, uint _balance) public {
@@ -82,6 +82,7 @@ contract DataLocations {
         data memory buffer = database[_address]; 
         return buffer;
     }
+    // returns tuple(uint, string)
 
     // prams declared call data are non modifiable
     // can save gas fee
