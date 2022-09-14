@@ -80,7 +80,7 @@ contract Base {
 
 
     // State Varibale
-    int def; // Default; It's private??? don't know
+    int def; // Default; It's private??? don't know. Works like Internal
     int public defV2; // Accesible Everywhere
     int private defV3; // In contract and childs
     int internal defV4;
@@ -104,6 +104,39 @@ contract Child is Base {
     // } // Member "privacy" not found or not visible after argument-dependent lookup in type(contract super Child)
     // Cannot do this shit
 
+
+    // Testing internals
+    function myDigestion() public pure returns(uint){
+        return digest(); // Base Internal Function
+    } // Works fine
+
+    // Getter for Base Sate Var
+    function getDef() public view returns(int){
+        return def;
+    } // Works Like Internal; No Modifier was given
+
+    function getDefV2() public view returns(int){
+        return defV2;
+    } // Works fine
+    // getting parents public var
+
+    // function getDefV3() public view returns(int){
+    //     return defV3;// Undeclared identifier. Did you mean "def", "defV2" or "defV4"?
+    // }
+    // Does not work; as its private
+
+    function getDefV4() public view returns(int){
+        return defV4;
+    } // Works Fine
+    // Accessing internal var
+
 }
 
 // We can play amny games here. Not enough here. But, for now. See you agian.
+
+// Private is not private ,)
+// https://www.youtube.com/watch?v=Gg6nt3YW74o&ab_channel=SmartContractProgrammer
+
+// private var can be read ouy side blockchain by using ether.js 
+// They are private only on contract level
+// https://www.youtube.com/watch?v=C9C4zgskHwg&ab_channel=EatTheBlocks
