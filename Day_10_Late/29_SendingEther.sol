@@ -38,7 +38,7 @@ contract Sender {
     }
 
     // 2 Paybale Fucntions 
-    function recieve() payable public {}
+    receive() external payable {} // No Function keyword More details in next file as well
 
     // Three ways to send ETH from contract to any address
     function sendViaTransfer(address payable _to, uint _amount) public payable {
@@ -84,8 +84,9 @@ receive() exists?  fallback()
          /   \
         yes   no
         /      \
-    receive()
+    receive()   fallback()
 */
+// https://www.youtube.com/watch?v=CMVC6Tp9gq4&ab_channel=SmartContractProgrammer
 
     // Function to receive Ether. msg.data must be empty
     receive() external payable {}

@@ -63,3 +63,6 @@ contract Chat {
     // web3 librarys do this cool filteration
     // As _to, and _from is indexed who can retrieve inbox of any address and send box as well. How cool?
 }
+
+// We can view Event Log in Remix Too
+// https://www.youtube.com/watch?v=CMVC6Tp9gq4&ab_channel=SmartContractProgrammer
