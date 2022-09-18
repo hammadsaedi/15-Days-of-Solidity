@@ -10,6 +10,8 @@ import "Day_12_Dead/35_ContractFactory.sol";
 // https://wizard.openzeppelin.com/
 // To make contract by OpenZeppelin standard 
 
+// https://www.youtube.com/watch?v=0Dby_DpEoQY&ab_channel=SmartContractProgrammer
+
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/Pausable.sol";
