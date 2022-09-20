@@ -21,12 +21,14 @@ pragma solidity ^0.8.13;
 // 7- Avoid to copy arrays in memory [creat storage pointer if you want to edit]
 // 8- Avoid for loop on dynamic arrays
 // 9- Optimize order of state varibale declared [EVM ;;; Beaware of slots]
-// Use ETH-GAS-REPORTER npm
+// 10- Use ETH-GAS-REPORTER npm
 
 // https://www.youtube.com/watch?v=4r20M9Fr8lY&ab_channel=SmartContractProgrammer
 
 // Moralis
 // https://www.youtube.com/watch?v=IkdoQI7API0&t=10s&ab_channel=MoralisWeb3
+// In solidity 0.8; There is checked arithmetic (Overflow) which is costly
+// Use unchecked arithmatic to save gas
 
 contract Gas {
     // start - 50908 gas
